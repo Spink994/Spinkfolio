@@ -1,0 +1,13 @@
+.cover_page_content {
+  animation: faint infinite 1.5s alternate;
+}
+
+@keyframes faint {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

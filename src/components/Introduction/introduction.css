@@ -1,0 +1,31 @@
+@media (min-width: 425px) {
+  .reveal {
+    animation: type 5.5s;
+    animation-delay: 3000ms;
+  }
+
+  @keyframes type {
+    0% {
+      max-width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 6px solid red;
+    }
+
+    90% {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 6px solid red;
+    }
+
+    100% {
+      max-width: 335px;
+    }
+  }
+}
+
+.custom_shadow {
+  box-shadow: 4px 7px 7px -4px rgba(8, 1, 1, 1) inset;
+  -webkit-box-shadow: 4px 7px 7px -4px rgba(8, 1, 1, 1) inset;
+  -moz-box-shadow: 4px 7px 7px -4px rgba(8, 1, 1, 1) inset;
+}
