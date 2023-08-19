@@ -5,6 +5,8 @@ import Title from '../Title';
 
 import Ecommerce from '../../assets/images/ecommerce.png';
 import Lifestyle from '../../assets/images/lifestyle.webp';
+import Go4Mi from '../../assets/images/go4mi.webp';
+import WaitingList from '../../assets/images/waiting-list.webp';
 import Savetobuy from '../../assets/images/savetobuy.webp';
 import Blog from '../../assets/images/blog.png';
 import SourceMyGadgets from '../../assets/images/source_my_gadgets.png';
@@ -13,17 +15,29 @@ import MedCity from '../../assets/images/medcity.png';
 
 const contents = [
 	{
+		image: Lifestyle,
+		title: 'Lifestyle',
+		liveLink: 'https://spink-learn.netlify.app/',
+		text: 'All your Favorite Brands in One Place. Achieve your dream lifestyle without debt',
+	},
+	{
+		image: WaitingList,
+		title: 'Pi-Pets Waiting List',
+		liveLink: 'https://pi-pets-waiting-list.vercel.app/',
+		text: 'Pi-Pets Waiting List. AI-powered remote monitoring platform for Pets and Racehorses',
+	},
+	{
+		image: Go4Mi,
+		title: 'Go4Mi',
+		readyState: false,
+		text: 'Shop Groceries Online From Stores Near You. Find stores close to your current location, place your order and get it delivered to you same day.',
+	},
+	{
 		image: Ecommerce,
 		title: 'Ecommerce',
 		gitLink: 'https://github.com/slowpacerapper/Spink',
 		liveLink: 'https://spink-ecommerce.netlify.app/',
 		text: 'A mini ecommerce web application. Frontend only.',
-	},
-	{
-		image: Lifestyle,
-		title: 'Lifestyle',
-		liveLink: 'https://spink-learn.netlify.app/',
-		text: 'All your Favorite Brands in One Place. Achieve your dream lifestyle without debt',
 	},
 	{
 		image: Blog,
@@ -68,7 +82,7 @@ const WorkSamples = () => {
 			<MaxWidth>
 				<div className="flex flex-col w-full gap-6">
 					<Title>Work Samples</Title>
-					<div className="flex flex-wrap gap-12 justify-between">
+					<div className="grid [@media(min-width:350px)]:grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-8 [@media(min-width:768px)]:grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))]">
 						{contents.map((item) => {
 							return (
 								<WorkCard
@@ -77,6 +91,7 @@ const WorkSamples = () => {
 									gitLink={item.gitLink}
 									liveLink={item.liveLink}
 									text={item.text}
+									readyState={item.readyState}
 									title={item.title}
 								/>
 							);

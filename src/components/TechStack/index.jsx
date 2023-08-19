@@ -4,9 +4,10 @@ import MaxWidth from '../MaxWidth';
 
 import { RiHtml5Line, RiReactjsFill, RiReactjsLine } from 'react-icons/ri';
 import { BsGithub } from 'react-icons/bs';
-import { SiJira, SiPostman, SiRedux, SiTailwindcss } from 'react-icons/si';
+import { SiJira, SiNormalizedotcss, SiPostman, SiRedux, SiTailwindcss } from 'react-icons/si';
 import { IoLogoJavascript } from 'react-icons/io';
 import { BiLogoTypescript } from 'react-icons/bi';
+import { TbBrandNextjs } from 'react-icons/tb';
 import Title from '../Title';
 
 const contents = [
@@ -28,7 +29,17 @@ const contents = [
 	{
 		logo: <BiLogoTypescript />,
 		title: 'Typescript',
-		text: "TypeScript is an open-source programming language developed by Microsoft. It is a superset of JavaScript, which means that any JavaScript code is also valid TypeScript code.",
+		text: 'TypeScript is an open-source programming language developed by Microsoft. It is a superset of JavaScript, which means that any JavaScript code is also valid TypeScript code.',
+	},
+	{
+		logo: <TbBrandNextjs />,
+		title: 'Next.js',
+		text: 'Next.js is an open-source web development framework created by the private company Vercel providing React-based web applications with server-side rendering and static website generation.',
+	},
+	{
+		logo: <SiNormalizedotcss />,
+		title: 'Zustand',
+		text: "Zustand is a state management library for React applications. It's designed to make managing state in your React components simpler and more efficient.",
 	},
 	{
 		logo: <RiHtml5Line />,
@@ -71,7 +82,7 @@ const TechStack = () => {
 			<MaxWidth>
 				<div className="flex flex-col w-full gap-6">
 					<Title>Tools I Use</Title>
-					<div className="flex flex-wrap gap-12 justify-between">
+					<div className="grid [@media(min-width:350px)]:grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-8 [@media(min-width:768px)]:grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))]">
 						{contents.map((item) => {
 							return (
 								<ContentBox
