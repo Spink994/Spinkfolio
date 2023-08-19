@@ -17,7 +17,7 @@ const contents = [
 	{
 		image: Lifestyle,
 		title: 'Lifestyle',
-		liveLink: 'https://spink-learn.netlify.app/',
+		liveLink: 'https://lifestyle.savetobuy.io/',
 		text: 'All your Favorite Brands in One Place. Achieve your dream lifestyle without debt',
 	},
 	{
